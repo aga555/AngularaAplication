@@ -8,7 +8,7 @@ import {Component} from '@angular/core';
 export class AppComponent {
 
   city = 'Warszawa';
-  days = ['Poniedzialek', 'Wtorek', 'Środa', 'Czwartek', 'Piątek'];
+  days = ['Poniedzialek', 'Wtorek', 'Środa', 'Czwartek', 'Piątek', 'Sobota', 'Niedziela'];
 
 
 }
