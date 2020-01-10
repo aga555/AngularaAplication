@@ -1,0 +1,16 @@
+table {
+
+}
+ td {
+  border-style: solid;
+  border-color: pink;
+}
+
+ tr {
+   background-color: gold;
+ }
+ p{
+   color: aqua;
+   font-size: 24px;
+ text-align: center;
+ }
