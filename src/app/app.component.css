@@ -9,8 +9,17 @@ table {
  tr {
    background-color: gold;
  }
+
  p{
-   color: aqua;
+   color: navy;
    font-size: 24px;
  text-align: center;
+   font-style: italic;
  }
+
+.title{
+color: pink;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 36px;
+}
