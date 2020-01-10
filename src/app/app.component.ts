@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,8 +6,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'pierwszyProjekt';
+  title = '';
   date = new Date();
-   city = 'Warszawa';
-   author ='Szymborska';
+  city = 'Warszawa';
+  poem = new Poem('Szymborska', 'Niektórzy lubią poezję');
+
+  showPoem() {
+    return'Wiersz to ' + this.poem.title + ' napisany przez noblistkę ' + this.poem.author;
+  }
+}
+
+class Poem {
+  constructor(public author: string, public title: string) {
+
+  }
+
 }
