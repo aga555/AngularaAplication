@@ -1,8 +1,9 @@
 <p>
   to jest kurs  Angular<br>
-  Dziś jest piątek {{date}}<br>
+  Dziś jest piątek {{date|date:'dd-MM-yy'}}<br>
+  Liczba pi to: {{pi|number:'1.1-2'}}<br>
  {{city}} to stolica Polski  <br>
 </p>
-<p class="title"> {{poem.title}}-{{poem.author}}</p>
+<p class="title"> {{poem.title|uppercase}}-{{poem.author}}</p>
 
 {{showPoem()}}

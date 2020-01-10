@@ -6,13 +6,13 @@ import {Component} from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = '';
+  pi =   Math.PI;
   date = new Date();
   city = 'Warszawa';
   poem = new Poem('Szymborska', 'Niektórzy lubią poezję');
 
   showPoem() {
-    return'Wiersz to ' + this.poem.title + ' napisany przez noblistkę ' + this.poem.author;
+    return 'Wiersz to ' + this.poem.title + ' napisany przez noblistkę ' + this.poem.author;
   }
 }
 
