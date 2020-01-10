@@ -9,6 +9,11 @@ export class AppComponent {
 
   city = 'Warszawa';
   days = ['Poniedzialek', 'Wtorek', 'Środa', 'Czwartek', 'Piątek', 'Sobota', 'Niedziela'];
+  poems = new Array<Poem>();
+
+  constructor() {
+    this.poems.push(new Poem('Szymborska', 'Poezja'), new Poem('Miłosz', 'Miłość'));
+  }
 
 
 }

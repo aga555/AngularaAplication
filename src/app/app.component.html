@@ -1,16 +1,22 @@
 <p class="title">
 
- {{city|uppercase}} to stolica Polski  <br>
+  {{city|uppercase}} to stolica Polski <br>
 </p>
 <p>
   Dni tygodnia
 </p>
 <ul>
   <li *ngFor="let day of days">
-{{day}}
+    {{day}}
   </li>
   <li>
 
+</ul>
+<ul class="squere">
+  <li *ngFor=" let poem of poems;let i=index">
+    {{i}}
+    {{poem.author}} - {{poem.title}}
+  </li>
 </ul>
 
 

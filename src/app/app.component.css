@@ -23,3 +23,7 @@ color: pink;
   font-style: normal;
   font-size: 36px;
 }
+ .squere{
+  list-style-type: square;
+   color: navy;
+}
