@@ -5,18 +5,25 @@
 <p>
   Dni tygodnia
 </p>
-<ul>
+
 
   <p *ngFor="let day of days">
  {{day}}
   </p>
-</ul>
-<ul class="squere">
-  <li *ngFor=" let poem of poems;let i=index">
+
+<div *ngIf="poems.length>0;else noPoem">
+
+  <div *ngFor=" let poem of poems;let i=index">
     {{i}}
     {{poem.author}} - {{poem.title}}
-  </li>
-</ul>
+  </div>
+</div>
+  <ng-template #noPoem>
+    <p>
+      nie ma wierszy
+    </p>
+  </ng-template>
+
 <app-test *ngFor="let i of [1,2,3,4]"></app-test>
 
 
