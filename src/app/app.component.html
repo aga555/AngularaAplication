@@ -7,9 +7,9 @@
 </p>
 
 
-  <p *ngFor="let day of days">
+  <ng-container *ngFor="let day of days">
  {{day}}
-  </p>
+  </ng-container>
 
 <div *ngIf="poems.length>0;else noPoem">
 
