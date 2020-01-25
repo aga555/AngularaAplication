@@ -1,29 +1,24 @@
 <p class="title">
-
-  {{city|uppercase}} to stolica Polski <br>
+  Witam w
+  {{city|uppercase}} <br>
 </p>
 <p>
   Dni tygodnia
 </p>
+<div *ngFor="let day of days">
+  <div [ngSwitch]="day">
 
+  <div *ngSwitchCase="'Poniedziałek'"> PONIEDZIAŁEK</div>
+  <div *ngSwitchCase="'Wtorek'"> WTOREK</div>
+  <div *ngSwitchCase="'Środa'"> ŚRODA</div>
+  <div *ngSwitchCase="'Czwartek'"> CZWARTEK</div>
+  <div *ngSwitchCase="'Piątek'"> PIATEK</div>
+  <div *ngSwitchCase="'Sobota'"> SOBOTA</div>
+  <div *ngSwitchCase="'Niedziela'"> NIEDZIELA</div>
 
-  <ng-container *ngFor="let day of days">
- {{day}}
-  </ng-container>
-
-<div *ngIf="poems.length>0;else noPoem">
-
-  <div *ngFor=" let poem of poems;let i=index">
-    {{i}}
-    {{poem.author}} - {{poem.title}}
-  </div>
 </div>
-  <ng-template #noPoem>
-    <p>
-      nie ma wierszy
-    </p>
-  </ng-template>
+</div>
 
-<app-test *ngFor="let i of [1,2,3,4]"></app-test>
+
 
 
