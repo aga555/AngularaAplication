@@ -11,10 +11,10 @@ export class AppComponent {
  skill = 'Angular';
   constructor() {
   }
-inputP(event){
+saveP(event){
     this.proffesion = event.target.value;
 }
-inputS(event){
+saveS(event){
     this.skill = event.target.value;
 }
 }

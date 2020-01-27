@@ -3,6 +3,6 @@
   Ten pracownik to {{proffesion}}, a jego umiejętność to {{skill}}
 </p>
 <label for="male">Zawód </label>
-<input [value]="proffesion">
+<input [value]="proffesion" (input)="saveP($event)">
 <label for="male">Umiejętności</label>
-<input [value]="skill">
+<input [value]="skill" (input)="saveS($event)">
