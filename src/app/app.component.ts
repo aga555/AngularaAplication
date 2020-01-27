@@ -16,7 +16,7 @@ export class AppComponent {
   constructor() {
     setTimeout(() => {
       this.isDisable = false;
-    }, 30000);
+    }, 3000);
   }
     change() {
       this.inputText = 'Zmiana teksut i koloru';
