@@ -1,13 +1,26 @@
 <div class="container">
   <div>
-
+    <input [(ngModel)]="newPlace">
+    <button (click)="add()">
+      Dodaj
+    </button>
   </div>
 </div>
 <div class="containter">
   <div>
-    Lista miejsc do odwiedzenia
+    <ul>
+      <li *ngFor="let place of placesList">
+        {{place}}
+        <button (click) ="remove(place)">Usuń</button>
+        <button (click)="done(place)"> Zrobione</button>
+      </li>
+    </ul>
   </div>
   <div>
-    Lista miejsc odwiedzonych
+ <ul>
+   <li *ngFor="let place of placesVisited">
+     {{place}}
+   </li>
+ </ul>
   </div>
 </div>

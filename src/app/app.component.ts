@@ -7,16 +7,25 @@ import {Component} from '@angular/core';
 })
 export class AppComponent {
 
- proffesion = 'programista';
- skill = 'Angular';
-  constructor() {
+  newPlace: string;
+  placesList: Array<string> = [];
+  placesVisited: Array<string> = [];
+  add() {
+    this.placesList.push(this.newPlace);
+    this.newPlace = '';
+    console.log(this.placesList);
   }
-saveP(event){
-    this.proffesion = event.target.value;
-}
-saveS(event){
-    this.skill = event.target.value;
-}
+
+  remove(place: string) {
+    this.placesList = this.placesList.filter(e => e !== place);
+
+  }
+
+  done(place: string) {
+    this.placesVisited.push(place);
+    console.log(this.placesVisited);
+  }
+
 }
 
 
