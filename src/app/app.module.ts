@@ -8,6 +8,7 @@ import { ItemComponent } from './item/item.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { HeaderComponent } from './header/header.component';
 import {FormsModule} from '@angular/forms';
+import { ChildComponent } from './child/child.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import {FormsModule} from '@angular/forms';
     MenuComponent,
     ItemComponent,
     WelcomeComponent,
-    HeaderComponent
+    HeaderComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,

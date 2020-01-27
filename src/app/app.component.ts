@@ -7,26 +7,7 @@ import {Component} from '@angular/core';
 })
 export class AppComponent {
 
-  newPlace: string;
-  placesList: Array<string> = [];
-  placesVisited: Array<string> = [];
-  add() {
-    this.placesList.push(this.newPlace);
-    this.newPlace = '';
-    console.log(this.placesList);
-  }
-
-  remove(place: string) {
-    this.placesList = this.placesList.filter(e => e !== place);
-
-  }
-
-  done(place: string) {
-    this.placesVisited.push(place);
-    this.remove(place);
-    console.log(this.placesVisited);
-  }
-
+  placesList = ['New York', 'Los Angeles', 'Tokyo'];
 }
 
 
