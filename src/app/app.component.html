@@ -8,15 +8,17 @@
 </div>
 <div class="containter">
   <div>
+    miejsca do odwiedzenia
     <ul>
       <li *ngFor="let place of placesList">
         {{place}}
-        <button (click) ="remove(place)">Usuń</button>
-        <button (click)="done(place)"> Zrobione</button>
+        <button (click) ="remove(place)"> Usuń </button>
+        <button (click)="done(place)"> Odwiedzone </button>
       </li>
     </ul>
   </div>
   <div>
+    Miejsca odwiedzone
  <ul>
    <li *ngFor="let place of placesVisited">
      {{place}}

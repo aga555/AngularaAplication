@@ -23,6 +23,7 @@ export class AppComponent {
 
   done(place: string) {
     this.placesVisited.push(place);
+    this.remove(place);
     console.log(this.placesVisited);
   }
 
