@@ -7,18 +7,24 @@ import {Component} from '@angular/core';
 })
 export class AppComponent {
 
-  city = 'Warszawa';
-  days = ['Poniedzialek', 'Wtorek', 'Środa', 'Czwartek', 'Piątek', 'Sobota', 'Niedziela'];
-  isVisible = true;
-  isHidden = false;
+  inputText = 'Tekst';
+  maxLenght = 9;
+  colorClass = 'color';
+  logoUrl = '';
+  isDisable = true;
 
-  show() {
-    this.isVisible = !this.isVisible;
+  constructor() {
+    setTimeout(() => {
+      this.isDisable = false;
+    }, 30000);
+  }
+    change() {
+      this.inputText = 'Zmiana teksut i koloru';
+      this.maxLenght = 30;
+      this.colorClass = 'color2'
+      this.logoUrl = 'https://angular.io/assets/images/logos/angular/angular.png';
+    }
   }
 
-  hidden() {
-    this.isHidden = !this.isHidden;
-  }
 
 
-}
