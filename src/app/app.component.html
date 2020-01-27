@@ -1,8 +1,8 @@
-<h3   > Angular- kurs property binding</h3>
+<h3> Angular- kurs property binding</h3>
 <p>
   Ten pracownik to {{proffesion}}, a jego umiejętność to {{skill}}
 </p>
 <label for="male">Zawód </label>
-<input [value]="proffesion" (input)="saveP($event)">
+<input [(ngModel)]="proffesion">
 <label for="male">Umiejętności</label>
-<input [value]="skill" (input)="saveS($event)">
+<input [(ngModel)]="skill" >
