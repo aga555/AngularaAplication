@@ -8,6 +8,10 @@ import {Component} from '@angular/core';
 export class AppComponent {
 
   placesList = ['New York', 'Los Angeles', 'Tokyo'];
+
+  selected(place: string): void {
+    console.log(place);
+  }
 }
 
 

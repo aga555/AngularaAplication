@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-child',
@@ -7,8 +7,10 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class ChildComponent implements OnInit {
 
-  @Input('city')
+  @Input()
   places;
+  @Output()
+  eventPlace = new EventEmitter<string>();
 
   constructor() {
   }
@@ -16,4 +18,7 @@ export class ChildComponent implements OnInit {
   ngOnInit() {
   }
 
+  select(place) {
+    this.eventPlace.emit(place);
+  }
 }
