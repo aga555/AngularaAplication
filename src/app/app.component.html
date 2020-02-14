@@ -1,1 +1,3 @@
-<app-child [places]="placesList" (eventPlace)="selected($event)"></app-child>
+<input #inputText>
+<button (click)="add(inputText)"> Dodaj </button>
+<app-child #childRef [places]="placesList" (eventPlace)="selected($event)"></app-child>
