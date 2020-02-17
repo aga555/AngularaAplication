@@ -11,6 +11,7 @@ import {FormsModule} from '@angular/forms';
 import { ChildComponent } from './child/child.component';
 import { AddPlaceComponent } from './add-place/add-place.component';
 import { ToVisitPlaceComponent } from './to-visit-place/to-visit-place.component';
+import { VisitedPlaceComponent } from './visited-place/visited-place.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ToVisitPlaceComponent } from './to-visit-place/to-visit-place.component
     HeaderComponent,
     ChildComponent,
     AddPlaceComponent,
-    ToVisitPlaceComponent
+    ToVisitPlaceComponent,
+    VisitedPlaceComponent
   ],
   imports: [
     BrowserModule,
