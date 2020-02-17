@@ -1,0 +1,16 @@
+<ng-container *ngIf="placesList.length > 0; else noPlace">
+  <ul>
+    <li *ngFor="let place of placesList">
+      {{place}}
+      <button (click)="remove(place)"> Usuń</button>
+      <button (click)="visited(place)"> Odwiedzone</button>
+    </li>
+  </ul>
+</ng-container>
+<ng-container>
+  <ng-template #noPlace>
+    <p>
+      brak miejsc do odwiezenia
+    </p>
+  </ng-template>
+</ng-container>

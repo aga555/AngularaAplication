@@ -10,6 +10,7 @@ import { HeaderComponent } from './header/header.component';
 import {FormsModule} from '@angular/forms';
 import { ChildComponent } from './child/child.component';
 import { AddPlaceComponent } from './add-place/add-place.component';
+import { ToVisitPlaceComponent } from './to-visit-place/to-visit-place.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { AddPlaceComponent } from './add-place/add-place.component';
     WelcomeComponent,
     HeaderComponent,
     ChildComponent,
-    AddPlaceComponent
+    AddPlaceComponent,
+    ToVisitPlaceComponent
   ],
   imports: [
     BrowserModule,
