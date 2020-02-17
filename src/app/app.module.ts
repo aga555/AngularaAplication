@@ -9,6 +9,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { HeaderComponent } from './header/header.component';
 import {FormsModule} from '@angular/forms';
 import { ChildComponent } from './child/child.component';
+import { AddPlaceComponent } from './add-place/add-place.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ChildComponent } from './child/child.component';
     ItemComponent,
     WelcomeComponent,
     HeaderComponent,
-    ChildComponent
+    ChildComponent,
+    AddPlaceComponent
   ],
   imports: [
     BrowserModule,

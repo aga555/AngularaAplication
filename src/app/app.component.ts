@@ -8,22 +8,25 @@ import {ChildComponent} from './child/child.component';
 })
 export class AppComponent {
 
-  placesList = ['New York', 'Los Angeles', 'Tokyo'];
 
-  @ViewChildren('childRef')
-  childComponent: ChildComponent;
 
-  @ViewChildren('inputText')
-  input: ElementRef;
+  placesList: Array<string> = [];
+  placesVisited: Array<string> = [];
 
-  selected(place: string): void {
-    console.log(place);
+  add(place: string) {
+    this.placesList.push(place);
   }
 
-  add(input: HTMLInputElement) {
-    this.placesList.push(input.value);
-   /* this.childComponent.places = [];*/
+  remove(place: string) {
+    this.placesList = this.placesList.filter(e => e !== place);
   }
+
+  visited(place: string) {
+    this.placesVisited.push(place);
+    this.remove(place);
+  }
+
+
 }
 
 

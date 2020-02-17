@@ -1,3 +1,35 @@
-<input #inputText>
-<button (click)="add(inputText)"> Dodaj </button>
-<app-child #childRef [places]="placesList" (eventPlace)="selected($event)"></app-child>
+<div>
+  <div class="container">
+    <app-add-place (emitPlace)="add($event)"></app-add-place>
+  </div>
+
+  <div class="container">
+    <div>
+      <ng-container *ngIf="placesList.length > 0; else noPlace">
+        <ul>
+          <li *ngFor="let place of placesList">
+            {{place}}
+            <button (click)="remove(place)"> Usuń</button>
+            <button (click)="visited(place)"> Odwiedzone</button>
+          </li>
+        </ul>
+      </ng-container>
+      <ng-container>
+        <ng-template #noPlace>
+          <p>
+            brak miejsc do odwiezenia
+          </p>
+        </ng-template>
+      </ng-container>
+    </div>
+    <div>
+      <p>
+        odwiedzoene miejsca : {{placesVisited.length}}
+      </p>
+      <ul>
+        <li *ngFor="let place of placesVisited">
+          {{place}}</li>
+      </ul>
+    </div>
+  </div>
+
