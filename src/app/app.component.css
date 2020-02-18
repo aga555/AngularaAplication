@@ -15,3 +15,15 @@
   font-weight: bold;
   text-align: center;
 }
+
+.button-travel{
+  border-radius: 15px;
+  min-width: 5vw;
+  min-height: 3vh;
+}
+.button-travel-delete{
+  background-color: red;
+}
+.button-travel-visited{
+  background-color: #60A830;
+}

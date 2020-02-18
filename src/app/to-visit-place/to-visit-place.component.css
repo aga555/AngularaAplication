@@ -1,0 +1,27 @@
+.listPlaceTo{
+  background-color: lightpink;
+  border:pink;
+  border-radius: 15px;
+  height: 700px;
+  width: 500px;
+  z-index: 999;
+  font-size: 24px;
+  font-family: Crimson Text, sans-serif;
+
+}
+.button-travel{
+  border-radius: 15px;
+  min-width: 5vw;
+  min-height: 3vh;
+}
+.delete{
+  background-color: red;
+  border: red;
+}
+.visited{
+  background-color: #60A830;
+  border: #60A830;
+}
+h3{
+  color: darkgoldenrod;
+}
