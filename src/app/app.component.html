@@ -8,6 +8,7 @@
 <div >
   <div class="container">
     <app-add-place (emitPlace)="add($event)"></app-add-place>
+   <app-add-visited-place (emitPlace)="visited($event)"></app-add-visited-place>
   </div>
 
   <div class="container">
@@ -15,7 +16,7 @@
 <app-to-visit-place [placesList]="placesList" (emitVisited)="visited($event)" (emitRemove)="remove($event)" ></app-to-visit-place>
     </div>
     <div>
-<app-visited-place [placesVisited]="placesVisited"></app-visited-place>
+<app-visited-place [placesVisited]="placesVisited" (emitRemove)="remove($event)"></app-visited-place>
     </div>
   </div>
 

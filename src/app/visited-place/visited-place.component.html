@@ -1,7 +1,9 @@
-<p>
+<h3>
   odwiedzoene miejsca : {{placesVisited.length}}
-</p>
+</h3>
 <ul>
   <li *ngFor="let place of placesVisited">
-    {{place}}</li>
+    {{place}}
+    <button (click)="remove(place)"> Usuń</button>
+  </li>
 </ul>

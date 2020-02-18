@@ -12,6 +12,7 @@ import { ChildComponent } from './child/child.component';
 import { AddPlaceComponent } from './add-place/add-place.component';
 import { ToVisitPlaceComponent } from './to-visit-place/to-visit-place.component';
 import { VisitedPlaceComponent } from './visited-place/visited-place.component';
+import { AddVisitedPlaceComponent } from './add-visited-place/add-visited-place.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { VisitedPlaceComponent } from './visited-place/visited-place.component';
     ChildComponent,
     AddPlaceComponent,
     ToVisitPlaceComponent,
-    VisitedPlaceComponent
+    VisitedPlaceComponent,
+    AddVisitedPlaceComponent
   ],
   imports: [
     BrowserModule,

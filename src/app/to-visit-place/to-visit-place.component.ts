@@ -6,22 +6,25 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
   styleUrls: ['./to-visit-place.component.css']
 })
 export class ToVisitPlaceComponent implements OnInit {
-@Input()
+  @Input()
   placesList = [];
-@Output()
-emitVisited = new EventEmitter<string>();
-@Output()
-emitRemove = new EventEmitter<string>();
+  @Output()
+  emitVisited = new EventEmitter<string>();
+  @Output()
+  emitRemove = new EventEmitter<string>();
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }
-  remove(place: string){
-this.emitRemove.emit(place);
-  }
- visited(place: string){
-    this.emitVisited.emit(place)
 
- }
+  remove(place: string) {
+    this.emitRemove.emit(place);
+  }
+
+  visited(place: string) {
+    this.emitVisited.emit(place);
+
+  }
 }
