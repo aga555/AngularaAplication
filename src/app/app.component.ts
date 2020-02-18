@@ -9,7 +9,6 @@ import {ChildComponent} from './child/child.component';
 export class AppComponent {
 
 
-
   placesList: Array<string> = [];
   placesVisited: Array<string> = [];
 
@@ -26,6 +25,9 @@ export class AppComponent {
     this.remove(place);
   }
 
+  removeVisited(place: string) {
+    this.placesVisited = this.placesVisited.filter(e => e !== place);
+  }
 
 }
 

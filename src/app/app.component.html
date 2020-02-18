@@ -16,7 +16,7 @@
 <app-to-visit-place [placesList]="placesList" (emitVisited)="visited($event)" (emitRemove)="remove($event)" ></app-to-visit-place>
     </div>
     <div>
-<app-visited-place [placesVisited]="placesVisited" (emitRemove)="remove($event)"></app-visited-place>
+<app-visited-place [placesVisited]="placesVisited" (emitRemove)="removeVisited($event)"></app-visited-place>
     </div>
   </div>
 
