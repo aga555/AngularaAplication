@@ -1,0 +1,18 @@
+
+.button-purple {
+  border-color: #800080;
+  background-color: #800080;
+  width: 10vw;
+  height: 3vh;
+  border-radius: 15px;
+  color: white;
+}
+.button-purple:hover{
+  background: hotpink;
+}
+input {
+  border-radius: 5px;
+  height: 3vh;
+}
+
+
