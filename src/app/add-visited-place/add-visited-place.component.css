@@ -8,7 +8,7 @@
   color: white;
 }
 .button-navy:hover{
-  background: lightskyblue;
+  background: lightblue;
 }
 input {
   border-radius: 5px;
@@ -16,4 +16,11 @@ input {
 }
 h3{
   color: darkgoldenrod;
+}
+.header-box{
+  background: lightblue;
+  border-radius: 15px;
+  padding: 20px;
+
+
 }
