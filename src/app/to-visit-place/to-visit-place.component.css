@@ -7,7 +7,6 @@
   z-index: 999;
   font-size: 24px;
   font-family: Crimson Text, sans-serif;
-
 }
 .button-travel{
   border-radius: 15px;
@@ -24,4 +23,16 @@
 }
 h3{
   color: darkgoldenrod;
+}
+li {
+  background: lightgray;
+  margin: 5px;
+}
+.odd-li{
+  background: lavender;
+  margin: 5px;
+}
+.last-li{
+  background: pink;
+  margin: 5px;
 }
