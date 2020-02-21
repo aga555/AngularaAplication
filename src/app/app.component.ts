@@ -1,4 +1,4 @@
-import {Component, ElementRef, ViewChildren} from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChildren} from '@angular/core';
 import {ChildComponent} from './child/child.component';
 
 @Component({
@@ -6,7 +6,7 @@ import {ChildComponent} from './child/child.component';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
 
 
   placesList: Array<string> = [];
@@ -29,6 +29,10 @@ export class AppComponent {
     this.placesVisited = this.placesVisited.filter(e => e !== place);
   }
 
+  ngOnInit(): void {
+    this.placesList = ['Słowenia', 'Włochy', 'Hiszpania'];
+    this.placesVisited = ['Węgry', 'Rumunia', 'Bułgaria'];
+  }
 }
 
 
