@@ -1,8 +1,8 @@
 <div class="listPlaceTo">
   <ng-container *ngIf="placesList.length > 0; else noPlace">
-    <p [ngStyle]="{color:getColor()}" > Moje planowane miejsca od odwiedzenia :{{placesList.length}}</p>
+    <p [ngStyle]="{color:getColor()}"> Moje planowane miejsca od odwiedzenia :{{placesList.length}}</p>
     <ul>
-      <li *ngFor="let place of placesList">
+      <li *ngFor="let place of placesList ; let odd = odd" [ngClass]="{'odd-li': odd===true}">
         {{place}}
         <button class="button-travel delete" (click)="remove(place)"> Usuń</button>
         <button class="button-travel visited" (click)="visited(place)"> Odwiedzone</button>
