@@ -25,6 +25,10 @@ export class ToVisitPlaceComponent implements OnInit {
 
   visited(place: string) {
     this.emitVisited.emit(place);
+  }
+
+  getColor(): string {
+    return this.placesList.length >= 5 ? 'red' : 'green';
 
   }
 }

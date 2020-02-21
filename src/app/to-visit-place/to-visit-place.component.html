@@ -1,17 +1,18 @@
 <div class="listPlaceTo">
-<ng-container *ngIf="placesList.length > 0; else noPlace">
-  <ul>
-    <li *ngFor="let place of placesList">
-      {{place}}
-      <button class="button-travel delete" (click)="remove(place)"> Usuń</button>
-      <button class="button-travel visited" (click)="visited(place)"> Odwiedzone</button>
-    </li>
-  </ul>
-</ng-container>
-<ng-container>
-  <ng-template #noPlace>
-<h3>  Brak  planów  </h3>
+  <ng-container *ngIf="placesList.length > 0; else noPlace">
+    <p [ngStyle]="{color:getColor()}" > Moje planowane miejsca od odwiedzenia :{{placesList.length}}</p>
+    <ul>
+      <li *ngFor="let place of placesList">
+        {{place}}
+        <button class="button-travel delete" (click)="remove(place)"> Usuń</button>
+        <button class="button-travel visited" (click)="visited(place)"> Odwiedzone</button>
+      </li>
+    </ul>
+  </ng-container>
+  <ng-container>
+    <ng-template #noPlace>
+      <h3> Brak planów </h3>
 
-  </ng-template>
-</ng-container>
+    </ng-template>
+  </ng-container>
 </div>
