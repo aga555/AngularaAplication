@@ -6,8 +6,8 @@ export class PlacesService {
   private placesList: Array<string> = [];
   private placesVisited: Array<string> = [];
 
-  private placesListObservable = new BehaviorSubject<Array<string>>(this.placesList);
-  private placesVisitedListObservable = new BehaviorSubject<Array<string>>(this.placesVisited);
+  private placesListObservable = new BehaviorSubject<Array<string>>([]);
+  private placesVisitedListObservable = new BehaviorSubject<Array<string>>([]);
 
   constructor() {
     this.placesList = ['Słowenia', 'Włochy', 'Hiszpania'];
