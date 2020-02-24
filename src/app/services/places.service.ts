@@ -1,51 +1,58 @@
 import {Injectable} from '@angular/core';
 import {BehaviorSubject, Observable} from 'rxjs';
+import {Place} from '../../models/place';
 
 @Injectable()
 export class PlacesService {
-  private placesList: Array<string> = [];
-  private placesVisited: Array<string> = [];
+  private placesList: Array<Place> = [];
+  private placesVisited: Array<Place> = [];
 
-  private placesListObservable = new BehaviorSubject<Array<string>>([]);
-  private placesVisitedListObservable = new BehaviorSubject<Array<string>>([]);
+  private placesListObservable = new BehaviorSubject<Array<Place>>([]);
+  private placesVisitedListObservable = new BehaviorSubject<Array<Place>>([]);
 
   constructor() {
-    this.placesList = ['Słowenia', 'Włochy', 'Hiszpania'];
-    this.placesVisited = ['Węgry', 'Rumunia', 'Bułgaria'];
+    this.placesList = [
+      {name: 'Słowenia', created: new Date()}, {name: 'Włochy', created: new Date()}, {name: 'Hiszpania', created: new Date()}];
+    this.placesVisited = [{name: 'Węgry', created: new Date()}, {name: 'Rumunia', created: new Date()}, {
+      name: 'Bułgaria',
+      created: new Date()
+    }];
     this.placesListObservable.next(this.placesList);
     this.placesVisitedListObservable.next(this.placesVisited);
   }
 
-  add(place: string) {
+  add(place: Place) {
     this.placesList.push(place);
     this.placesListObservable.next(this.placesList);
   }
-  addVisited(place: string) {
+
+  addVisited(place: Place) {
     this.placesVisited.push(place);
     this.placesVisitedListObservable.next(this.placesVisited);
   }
 
-  remove(place: string) {
+  remove(place: Place) {
     this.placesList = this.placesList.filter(e => e !== place);
     this.placesListObservable.next(this.placesList);
   }
 
-  visited(place: string) {
+  visited(place: Place) {
     this.placesVisited.push(place);
     this.remove(place);
     this.placesVisitedListObservable.next(this.placesVisited);
     this.placesListObservable.next(this.placesList);
   }
 
-  removeVisited(place: string) {
+  removeVisited(place: Place) {
     this.placesVisited = this.placesVisited.filter(e => e !== place);
     this.placesVisitedListObservable.next(this.placesVisited);
   }
 
- getPlacesListObservable(): Observable<Array<string>> {
+  getPlacesListObservable(): Observable<Array<Place>> {
     return this.placesListObservable.asObservable();
- }
-  getPlacesVisitedListObservable(): Observable<Array<string>> {
+  }
+
+  getPlacesVisitedListObservable(): Observable<Array<Place>> {
     return this.placesVisitedListObservable.asObservable();
   }
 }

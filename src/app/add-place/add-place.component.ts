@@ -1,5 +1,6 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {PlacesService} from '../services/places.service';
+import {Place} from '../../models/place';
 
 @Component({
   selector: 'app-add-place',
@@ -18,7 +19,8 @@ export class AddPlaceComponent implements OnInit {
   }
 
   add() {
-    this.placesService.add(this.newPlace);
+    const place: Place = {name: this.newPlace, created: new Date()};
+    this.placesService.add(place);
     this.newPlace = '';
   }
 

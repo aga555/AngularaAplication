@@ -1,5 +1,6 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {PlacesService} from '../services/places.service';
+import {Place} from '../../models/place';
 
 @Component({
   selector: 'app-add-visited-place',
@@ -16,7 +17,8 @@ export class AddVisitedPlaceComponent implements OnInit {
   }
 
   add() {
-    this.placesService.addVisited(this.visitedPlace);
+    const place: Place = {name: this.visitedPlace, created: new Date()};
+    this.placesService.addVisited(place);
     this.visitedPlace = '';
   }
 
