@@ -1,4 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {PlacesService} from '../services/places.service';
 
 @Component({
   selector: 'app-visited-place',
@@ -6,19 +7,21 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
   styleUrls: ['./visited-place.component.css']
 })
 export class VisitedPlaceComponent implements OnInit {
-  @Input()
-  placesVisited: Array<string> = [];
-  @Output()
-  emitRemove = new EventEmitter<string>();
 
-  constructor() {
+  placesVisited: Array<string> = [];
+
+
+  constructor(private placeService: PlacesService) {
+    this.placeService.getPlacesVisitedListObservable().subscribe((places: Array<string>) => {
+      this.placesVisited = places;
+    });
   }
 
   ngOnInit() {
   }
 
 
-  remove(place: string) {
-    this.emitRemove.emit(place);
+  removeVisited(place: string) {
+    this.placeService.removeVisited(place);
   }
 }

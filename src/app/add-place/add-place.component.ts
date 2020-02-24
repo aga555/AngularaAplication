@@ -1,4 +1,5 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {PlacesService} from '../services/places.service';
 
 @Component({
   selector: 'app-add-place',
@@ -8,17 +9,16 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 export class AddPlaceComponent implements OnInit {
 
   newPlace: string;
-  @Output()
-  emitPlace = new EventEmitter<string>();
 
-  constructor() {
+
+  constructor(private placesService: PlacesService) {
   }
 
   ngOnInit() {
   }
 
   add() {
-    this.emitPlace.emit(this.newPlace);
+    this.placesService.add(this.newPlace);
     this.newPlace = '';
   }
 

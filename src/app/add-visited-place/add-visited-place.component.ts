@@ -1,4 +1,5 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {PlacesService} from '../services/places.service';
 
 @Component({
   selector: 'app-add-visited-place',
@@ -7,17 +8,15 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 })
 export class AddVisitedPlaceComponent implements OnInit {
   visitedPlace: string;
-  @Output()
-  emitPlace = new EventEmitter<string>();
 
-  constructor() {
+  constructor(private placesService: PlacesService) {
   }
 
   ngOnInit() {
   }
 
   add() {
-    this.emitPlace.emit(this.visitedPlace);
+    this.placesService.addVisited(this.visitedPlace);
     this.visitedPlace = '';
   }
 

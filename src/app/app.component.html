@@ -1,24 +1,24 @@
 <section class="header">
-<div class="title">
- <p> Moja mapa podróży  </p>
-</div>
+  <div class="title">
+    <p> Moja mapa podróży </p>
+  </div>
 </section>
 
 <section class="image">
-<div >
-  <div class="container">
-    <app-add-place (emitPlace)="add($event)"></app-add-place>
-   <app-add-visited-place (emitPlace)="visited($event)"></app-add-visited-place>
-  </div>
-
-  <div class="container">
-    <div>
-<app-to-visit-place [placesList]="placesList" (emitVisited)="visited($event)" (emitRemove)="remove($event)" ></app-to-visit-place>
+  <div>
+    <div class="container">
+      <app-add-place></app-add-place>
+      <app-add-visited-place></app-add-visited-place>
     </div>
-    <div>
-<app-visited-place [placesVisited]="placesVisited" (emitRemove)="removeVisited($event)"></app-visited-place>
-    </div>
-  </div>
 
-</div>
+    <div class="container">
+      <div>
+        <app-to-visit-place></app-to-visit-place>
+      </div>
+      <div>
+        <app-visited-place></app-visited-place>
+      </div>
+    </div>
+
+  </div>
 </section>

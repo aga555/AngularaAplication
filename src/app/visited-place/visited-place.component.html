@@ -7,7 +7,7 @@
 <ul>
   <li *ngFor="let place of placesVisited">
     {{place}}
-    <button class=" button-travel delete" (click)="remove(place)"> Usuń</button>
+    <button class=" button-travel delete" (click)="removeVisited(place)"> Usuń</button>
   </li>
 </ul>
 </div>

@@ -1,4 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output, ViewEncapsulation} from '@angular/core';
+import {PlacesService} from '../services/places.service';
 
 @Component({
   selector: 'app-to-visit-place',
@@ -7,25 +8,25 @@ import {Component, EventEmitter, Input, OnInit, Output, ViewEncapsulation} from 
   encapsulation: ViewEncapsulation.None
 })
 export class ToVisitPlaceComponent implements OnInit {
-  @Input()
-  placesList = [];
-  @Output()
-  emitVisited = new EventEmitter<string>();
-  @Output()
-  emitRemove = new EventEmitter<string>();
 
-  constructor() {
+  placesList = [];
+
+
+  constructor(private placesService: PlacesService) {
+    this.placesService.getPlacesListObservable().subscribe((places: Array<string>) => {
+      this.placesList = places ;
+    });
   }
 
   ngOnInit() {
   }
 
   remove(place: string) {
-    this.emitRemove.emit(place);
+    this.placesService.remove(place);
   }
 
   visited(place: string) {
-    this.emitVisited.emit(place);
+    this.placesService.visited(place);
   }
 
   getColor(): string {
