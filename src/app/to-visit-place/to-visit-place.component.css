@@ -1,19 +1,9 @@
-.listPlaceTo{
-  background-color: lightpink;
-  border:pink;
-  border-radius: 15px;
-  height: 700px;
-  width: 500px;
-  z-index: 999;
-  font-size: 24px;
-  font-family: Crimson Text, sans-serif;
-}
 
 
 h3{
   color: darkgoldenrod;
 }
-li {
+/*li {
   background: lightgray;
   margin: 5px;
 }
@@ -24,4 +14,4 @@ li {
 .last-li{
   background: pink;
   margin: 5px;
-}
+}*/

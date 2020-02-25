@@ -5,17 +5,20 @@
   align-items: center;
   background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
 }
+
 .travel-content {
   text-align: center;
   width: 100%;
 }
+
 .travel h3 {
-  color: rgba(0,0,0,0.8);
+  color: rgba(0, 0, 0, 0.8);
   text-transform: uppercase;
   margin: 0;
   font-size: 2rem;
   letter-spacing: 5px;
 }
+
 .travel h2 {
   margin: 0 0 10px;
   line-height: 1;
@@ -24,17 +27,20 @@
   font-weight: 900;
   text-transform: uppercase;
 }
+
 .travel p {
   font-size: 1.1rem;
-  color: rgba(0,0,0,0.7);
+  color: rgba(0, 0, 0, 0.7);
   line-height: 1.4;
 }
+
 .travel h2 {
   background-size: cover;
   background: url("/assets/forest_fog_autumn_133811_1280x720.jpg") no-repeat center;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
+
 .button {
   border: 1px solid black;
   border-radius: 25px;
@@ -43,61 +49,80 @@
   color: black;
   margin-top: 40px;
   display: inline-block;
-  transition: background 0.5s ease-in-out,color 0.5s ease-in-out ;
+  transition: background 0.5s ease-in-out, color 0.5s ease-in-out;
 }
-.button:hover{
+
+.button:hover {
   background: black;
   color: white;
 }
-.travel-box{
+
+.travel-box {
   background: url("/assets/diagonal-lines-pattern-repeat-straight.png");
   padding-left: 20px;
 
 }
+
 .travel h4 {
-  color: rgba(0,0,0,0.8);
+  color: rgba(0, 0, 0, 0.8);
   text-transform: uppercase;
   font-size: 1rem;
   letter-spacing: 2px;
   margin: 1rem 0 0;
 }
+
 input {
-  border-radius: 5px  ;
+  border-radius: 5px;
   height: 3vh;
 }
 
-.button-travel{
+
+
+.delete {
+  background-size: cover;
+  background: transparent url("assets/delete-red.png") center no-repeat;
+  display: inline-block; border: none; padding: 20px;  border-radius: 900px;  cursor: pointer;
+  transition: background 0.5s ease-in-out, color 0.5s ease-in-out;
+
+}
+
+.delete:hover {
+  background-size: cover;
+  background: transparent url("assets/delete-dark.png") center no-repeat;
+  display: inline-block; border: none; padding: 20px;  border-radius: 900px;  transition: all 0.5s; cursor: pointer;
+
+}
+
+.visited {
+  background-size: cover;
+  background: transparent url("assets/check-light.png") center no-repeat;
+  display: inline-block; border: none; padding: 20px;  border-radius: 900px;   cursor: pointer;
+  transition: background 0.5s ease-in-out, color 0.5s ease-in-out;
+
+
+
+}
+
+.visited:hover {
+  background-size: cover;
+  background: transparent url("assets/check-green.png") center no-repeat;
+  display: inline-block; border: none; padding: 20px;  border-radius: 900px;  cursor: pointer;
+  transition: background 0.5s ease-in-out, color 0.5s ease-in-out;
+
+}
+
+.flex-box-right  {
+  display:flex;
+  justify-content:space-between;
+
+}
+
+.listPlace{
   border-radius: 15px;
-  min-width: 5vw;
-  min-height: 3vh;
+  z-index: 999;
+  font-size: 24px;
+  font-family: Crimson Text, sans-serif;
+  margin: 15px;
+
 }
-.delete{
-  background-color: darkred;
-  border: 1px solid darkred;
-  border-radius: 25px;
-  padding: 10px 30px;
-  text-decoration: none;
-  color: white;
-  margin-top: 40px;
-  display: inline-block;
-  transition: background 0.5s ease-in-out,color 0.5s ease-in-out ;
-}
-.delete:hover{
-  background: white;
-  color: darkred;
-}
-.visited{
-  background-color: darkolivegreen;
-  border: 1px solid darkolivegreen;
-  border-radius: 25px;
-  padding: 10px 30px;
-  text-decoration: none;
-  color: white;
-  margin-top: 40px;
-  display: inline-block;
-  transition: background 0.5s ease-in-out,color 0.5s ease-in-out ;
-}
-.visited:hover{
-  background: white;
-  color: darkolivegreen;
-}
+

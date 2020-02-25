@@ -4,9 +4,12 @@
   odwiedzoene miejsca : {{placesVisited.length}}
 </p>
 <ul>
-  <li *ngFor="let place of placesVisited">
-    {{place.name}}
-    <button class=" button-travel delete" (click)="removeVisited(place)"> Usuń</button>
+
+  <li class="flex-box-right" *ngFor="let place of placesVisited">
+     {{place.name}}
+    <div>
+    <button class=" button-travel delete" (click)="removeVisited(place)"> </button></div>
+
   </li>
 </ul>
 
