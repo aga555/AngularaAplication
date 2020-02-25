@@ -1,13 +1,13 @@
 <div class="listPlace">
 
-
-<h4>
+<p>
   odwiedzoene miejsca : {{placesVisited.length}}
-</h4>
+</p>
 <ul>
   <li *ngFor="let place of placesVisited">
     {{place.name}}
     <button class=" button-travel delete" (click)="removeVisited(place)"> Usuń</button>
   </li>
 </ul>
+
 </div>

@@ -8,19 +8,8 @@
   font-size: 24px;
   font-family: Crimson Text, sans-serif;
 }
-.button-travel{
-  border-radius: 15px;
-  min-width: 5vw;
-  min-height: 3vh;
-}
-.delete{
-  background-color: red;
-  border: red;
-}
-.visited{
-  background-color: #60A830;
-  border: #60A830;
-}
+
+
 h3{
   color: darkgoldenrod;
 }
