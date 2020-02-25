@@ -1,15 +1,5 @@
 
-.button-navy {
-  border-color:#000080;
-  background-color: #000080;
-  width: 10vw;
-  height: 3vh;
-  border-radius: 15px;
-  color: white;
-}
-.button-navy:hover{
-  background: lightblue;
-}
+
 input {
   border-radius: 5px;
   height: 3vh;
