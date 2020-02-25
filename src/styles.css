@@ -1,1 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
+.travel {
+  background-color: #ffff;
+  color: #3333;
+  align-items: center;
+  background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
+}
+.travel-content {
+  text-align: center;
+  width: 100%;
+}
+.travel h3 {
+  color: rgba(0,0,0,0.8);
+  text-transform: uppercase;
+  margin: 0;
+  font-size: 2rem;
+  letter-spacing: 5px;
+}
+.travel h2 {
+  margin: 0 0 10px;
+  line-height: 1;
+  color: black;
+  font-size: 10rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.travel p {
+  font-size: 1.1rem;
+  color: rgba(0,0,0,0.7);
+  line-height: 1.4;
+}
+.travel h2 {
+  background: url("/assets/forest_fog_autumn_133811_1280x720.jpg")
+no-repeat;
+  background-size: cover;
+  background-position: center;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}

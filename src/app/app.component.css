@@ -1,11 +1,11 @@
 .container{
   display: flex;justify-content: space-around;
 }
-.image{
+/*.image{
   height :90vh; background-size:cover; width:auto;
   background-image:url('../assets/bg.png ');
   background-position:50% 50%;
-}
+}*/
 .header{
   height:10vh;
 }
