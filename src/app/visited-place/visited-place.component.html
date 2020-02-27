@@ -11,7 +11,7 @@
     <button class=" button-travel delete" (click)="removeVisited(place)"> </button></div>
   </li>
 </ul>
-  <p > Do dowiedzenia Europa  {{placesVisited.length}} z 47  </p>
+  <p > Odwiedzone kraje  Europa  {{placesVisited.length}} z 47  </p>
   <div class="progres" [title]="'Plans' + (placesVisited.length*100)/47 + '%'">
     <div [style.width.%]="placesVisited.length"></div>
   </div>
