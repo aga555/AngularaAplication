@@ -126,3 +126,12 @@ input {
 
 }
 
+.progres {
+  background-color: red;
+  height: 10px;
+}
+
+.progres div {
+  background-color: green;
+  height: 100%;
+}

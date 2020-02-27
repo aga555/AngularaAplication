@@ -11,6 +11,10 @@
         </div>
       </li>
     </ul>
+    <p > Do dowiedzenia Europa  {{placesList.length}} z 47  </p>
+    <div class="progres" [title]="'Plans' + (placesList.length*100)/47 + '%'">
+      <div [style.width.%]="placesList.length"></div>
+    </div>
   </ng-container>
   <ng-container>
     <ng-template #noPlace>
