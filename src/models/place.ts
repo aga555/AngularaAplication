@@ -1,6 +1,7 @@
 export interface Place {
   name: string;
-  created: Date;
+  code?: string;
+  created?: Date;
   finished?: Date;
 
 }

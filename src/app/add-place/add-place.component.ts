@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {PlacesService} from '../services/places.service';
 import {Place} from '../../models/place';
 
+
 @Component({
   selector: 'app-add-place',
   templateUrl: './add-place.component.html',
@@ -14,6 +15,12 @@ export class AddPlaceComponent implements OnInit {
 
   constructor(private placesService: PlacesService) {
   }
+
+  countries: Place[] = [
+    {name: 'Poland'},
+    {name: 'Germany'},
+    {name: 'Great Britain'}
+  ];
 
   ngOnInit() {
   }

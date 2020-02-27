@@ -7,6 +7,7 @@ import {ToVisitPlaceComponent} from './to-visit-place/to-visit-place.component';
 import {VisitedPlaceComponent} from './visited-place/visited-place.component';
 import {AddVisitedPlaceComponent} from './add-visited-place/add-visited-place.component';
 import {PlacesService} from './services/places.service';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import {PlacesService} from './services/places.service';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [PlacesService],
   bootstrap: [AppComponent]
