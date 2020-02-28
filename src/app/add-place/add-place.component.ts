@@ -3,6 +3,9 @@ import {PlacesService} from '../services/places.service';
 import {Place} from '../../models/place';
 
 
+
+
+
 @Component({
   selector: 'app-add-place',
   templateUrl: './add-place.component.html',
@@ -17,30 +20,16 @@ export class AddPlaceComponent implements OnInit {
   }
 
   countries: Place[] = [
-    {name: 'Poland'},
-    {name: 'Germany'},
-    {name: 'Great Britain'},
-    {name: ' Austria'},
-    {name: 'Belgium'},
-    {name: ' Bulgaria'},
-    {name: 'Croatia'},
-    {name: 'Cyprus'},
-    {name: ' Czech Republic'},
-    {name: ' Denmark'},
-    {name: 'Estonia'},
-    {name: ' Finland'}, {name: 'France'},
-    {name: 'Germany'},
-    {name: ' Greece'}, {name: 'Hungary'}, {name: ' Ireland'}, {name: ' Italy'},
-    {name: 'Latvia'}, {name: ' Lithuania'}, {name: 'Luxembourg'}, {name: ' Malta'}, {name: 'Netherlands'}, {name: 'Poland'},
-    {name: 'Portugal'},
-    {name: 'Romania'}, {name: ' Slovakia'}, {name: 'Slovenia'}, {name: ' Spain'}, {name: 'Sweden'}, {name: 'Tirana'},
-    {name: 'Andorra'},
-    {name: ' Belarus'},
-    {name: 'Bosnia and Herzegovina '},
-    {name: 'Montenegro'},
-    {name: 'Iceland '}, {name: 'Kazakhstan'}, {name: ' Liechtenstein'}, {name: 'Macedonia'}, {name: 'Monaco'}, {name: 'Norway'},
-    {name: 'Russia '}, {name: 'Serbia '},
-    {name: 'Switzerland'}, {name: 'San Marino'}, {name: 'Ukraine'}, {name: 'Vatican'}
+    {name: 'Austria', flag: 'assets/austria.png'},
+    {name: 'Belgia'}, {name: 'Dania'}, {name: 'Estonia'}, {name: 'Finlandia'}, {name: 'Francja'}, {name: 'Grecja'}, {name: 'Hiszpania'},
+    {name: 'Czechy'}, {name: 'Islandia'}, {name: 'Liechtenstein'}, {name: 'Litwa'}, {name: 'Luksemburg'},
+    {name: 'Łotwa'},
+    {name: 'Malta'},
+    {name: 'Holandia'}, {name: 'Norwegia'}, {name: ' Szwajcaria'}, {name: 'Szwecja'},
+    {name: 'Polska'},
+    {name: 'Portugalia'},
+    {name: 'Słowacja'},
+    {name: 'Niemcy'}, {name: 'Słowenia'}, {name: ' Węgry'}, {name: 'Włochy'}
   ];
 
 

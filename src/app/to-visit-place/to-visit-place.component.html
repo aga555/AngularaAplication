@@ -2,16 +2,17 @@
   <ng-container *ngIf="placesList.length > 0; else noPlace">
     <p [ngStyle]="{color:getColor()}"> Moje planowane miejsca od odwiedzenia :{{placesList.length}}</p>
     <ul>
-      <li class="flex-box-right" *ngFor="let place of placesList ; let odd = odd" [ngClass]="{'odd-li': odd, 'last-li': placesList.length===1}">
+      <li class="flex-box-right" *ngFor="let place of placesList ; let odd = odd"
+          [ngClass]="{'odd-li': odd, 'last-li': placesList.length===1}">
 
-        {{place.name}}
+        {{place.name}} {{place.flag}}
         <div class="group">
-        <button class="button-travel delete" (click)="remove(place)"> </button>
-        <button class="button-travel visited" (click)="visited(place)"> </button>
+          <button class="button-travel delete" (click)="remove(place)"></button>
+          <button class="button-travel visited" (click)="visited(place)"></button>
         </div>
       </li>
     </ul>
-    <p > Do dowiedzenia Europa  {{placesList.length}} z 47  </p>
+    <p> Do dowiedzenia Europa  {{placesList.length}} z 47 </p>
     <div class="progres" [title]="'Plans' + (placesList.length*100)/47 + '%'">
       <div [style.width.%]="placesList.length"></div>
     </div>

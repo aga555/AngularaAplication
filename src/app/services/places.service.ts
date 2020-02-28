@@ -12,10 +12,9 @@ export class PlacesService {
 
   constructor() {
     this.placesList = [
-      {name: 'Słowenia', created: new Date()}, {name: 'Włochy', created: new Date()}, {name: 'Hiszpania', created: new Date()}];
-    this.placesVisited = [{name: 'Węgry', created: new Date()}, {name: 'Rumunia', created: new Date()}, {
-      name: 'Bułgaria',
-      created: new Date()
+      {name: 'Słowenia'}, {name: 'Włochy', }, {name: 'Hiszpania'}];
+    this.placesVisited = [{name: 'Węgry'}, {name: 'Rumunia'}, {
+      name: 'Bułgaria'
     }];
     this.placesListObservable.next(this.placesList);
     this.placesVisitedListObservable.next(this.placesVisited);

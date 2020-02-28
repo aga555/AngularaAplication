@@ -3,5 +3,7 @@ export interface Place {
   code?: string;
   created?: Date;
   finished?: Date;
+  flag?: string;
+  imageUrl?: string;
 
 }
