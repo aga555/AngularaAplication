@@ -8,6 +8,9 @@ import {VisitedPlaceComponent} from './visited-place/visited-place.component';
 import {AddVisitedPlaceComponent} from './add-visited-place/add-visited-place.component';
 import {PlacesService} from './services/places.service';
 import {HttpClientModule} from '@angular/common/http';
+import {MatSelectModule} from '@angular/material/select';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { VersionComponent } from './version/version.component';
 
 @NgModule({
   declarations: [
@@ -15,12 +18,19 @@ import {HttpClientModule} from '@angular/common/http';
     AddPlaceComponent,
     ToVisitPlaceComponent,
     VisitedPlaceComponent,
-    AddVisitedPlaceComponent
+    AddVisitedPlaceComponent,
+    VersionComponent,
+    VersionComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatSelectModule,
+    BrowserAnimationsModule
+  ],
+  exports: [
+    MatSelectModule,
   ],
   providers: [PlacesService],
   bootstrap: [AppComponent]
