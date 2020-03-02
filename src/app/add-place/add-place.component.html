@@ -1,13 +1,13 @@
+<div class="travel-box">
+  <h4> Gdzie chce jechać ? </h4>
+  <label>
+    <select [(ngModel)]="newPlace">
+      <option *ngFor="let place of countries" [value]="place.name">
+        {{place.name}}
+      </option>
+    </select>
+  </label>
+  <button class="button" (click)="add() "> Dodaj</button>
 
-  <div class="travel-box">
-    <h4> Gdzie chce jechać ? </h4>
-    <label>
-      <select [(ngModel)]="newPlace" >
-        <option *ngFor="let place of countries" [value]="place.name">
-          {{place.name}}
-        </option>
-      </select>
-    </label>
-    <button class="button" (click)="add() "> Dodaj </button>
-  </div>
 
+</div>

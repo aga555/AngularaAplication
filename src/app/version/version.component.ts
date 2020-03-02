@@ -4,7 +4,7 @@ import {Component, OnInit} from '@angular/core';
   selector: 'app-version',
   styleUrls: ['./version.component.css'],
   template: `
-    <p class="version__application">Aktualna wersja apliikacji: {{ version }}</p>
+    <p class="version__application">Aktualna wersja aplikacji: {{ version }}</p>
   `,
   styles: [
       `
