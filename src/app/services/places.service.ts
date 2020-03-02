@@ -12,7 +12,7 @@ export class PlacesService {
 
   constructor() {
     this.placesList = [
-      {name: 'Słowenia'}, {name: 'Włochy', }, {name: 'Hiszpania'}];
+      {name: 'Słowenia', imageUrl: '/assets/Słowenia.png'}, {name: 'Włochy'}, {name: 'Hiszpania'}];
     this.placesVisited = [{name: 'Węgry'}, {name: 'Rumunia'}, {
       name: 'Bułgaria'
     }];

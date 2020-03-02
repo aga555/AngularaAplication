@@ -36,9 +36,10 @@
 
 .travel h2 {
   background-size: cover;
-  background: url("assets/forest_fog_autumn_133811_1280x720.jpg") no-repeat center;
+  background: url("assets/tajland.jpg") no-repeat center;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
+  font-family:  sans-serif;
 }
 
 .button {
